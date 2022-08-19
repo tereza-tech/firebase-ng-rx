@@ -1,0 +1,14 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/core/src",
+  "prefix": "ngrx-transactions-app",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/core/**/*.ts", "libs/core/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

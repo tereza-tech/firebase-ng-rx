@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "projects": {
+    "app-shell": "apps/app-shell",
+    "auth": "libs/auth",
+    "my-test": "libs/my-test",
+    "client-app": "apps/client-app",
+    "core": "libs/core",
+    "core-components": "libs/core/src/lib/components",
+    "core-form": "libs/core/src/lib/components/src/lib/form",
+    "models": "libs/core/src/lib/components/src/lib/models"
+  }
+}

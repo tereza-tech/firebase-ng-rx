@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/auth/src",
+  "prefix": "ngrx-transactions-app",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/**/*.ts",
+          "libs/auth/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
