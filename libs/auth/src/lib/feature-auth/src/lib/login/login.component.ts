@@ -1,8 +1,8 @@
-import { DynamicFormComponent, Field, ListErrorsComponent, NgrxFormsFacade } from '@ngrx-transactions-app/core/forms';
+import { DynamicFormComponent, Field, ListErrorsComponent, NgrxFormsFacade } from '@ngrx-transactions-app/core-forms';
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { AuthFacade } from '@ngrx-transactions-app/auth/data-access';
+import { AuthFacade } from 'data-access';
 
 const structure: Field[] = [
   {

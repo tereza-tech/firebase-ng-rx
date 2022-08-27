@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { environment } from '../environments/environment';
 import { NxModule } from '@nrwl/nx';
-import { RouterModule } from '@angular/router';
+import { RouterModule, InitialNavigation } from '@angular/router';
 import { authRoutes, AuthModule } from '@demo-app/auth';
 import { LayoutComponent } from './layout/layout.component';
 

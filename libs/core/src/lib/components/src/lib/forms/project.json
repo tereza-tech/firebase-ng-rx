@@ -1,14 +1,14 @@
 {
   "projectType": "library",
-  "sourceRoot": "libs/core/src/lib/components/src/lib/form/src",
+  "sourceRoot": "libs/core/src/lib/components/src/lib/forms/src",
   "prefix": "ngrx-transactions-app",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/core/src/lib/components/src/lib/form/**/*.ts",
-          "libs/core/src/lib/components/src/lib/form/**/*.html"
+          "libs/core/src/lib/components/src/lib/forms/**/*.ts",
+          "libs/core/src/lib/components/src/lib/forms/**/*.html"
         ]
       }
     }

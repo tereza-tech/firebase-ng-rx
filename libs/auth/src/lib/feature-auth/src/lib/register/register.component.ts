@@ -2,8 +2,8 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Validators, ValidatorFn } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { AuthFacade } from '../../../../data-access/src/index';
-import { } from '../../../../../../../core/src/lib/components/src/lib/form/src/lib/form.module'
+import { AuthFacade } from '../../data-access/src/index';
+import { FormsModule } from '@ngrx-transactions-app/core-forms'
 
 
 interface Field {

@@ -1,21 +1,37 @@
-import { LayoutComponent } from './layout/layout/layout.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LayoutComponent } from './layout/layout.component';
+import { ClientAppGuard } from '@ngrx-transactions-app/core-guards';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'vaki' },
+  /*{ path: '', pathMatch: 'full', redirectTo: 'vaki' },*/
 
   {
-    path: 'vaki',
+    path: '',
+    canActivateChild: [ ClientAppGuard ],
     component: LayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: () =>
-          import('./vakers/vakers.module').then((m) => m.VakersModule),
-      },
-    ],
-  },
+          children: [
+               {
+                    path: 'work',
+                    loadChildren: () => import('@ralbx/').then(m => m.AuthModule),
+               },
+               {
+                    path: "dashboard",
+                    loadChildren: () =>
+                         import("@ralbx/pages/dashboard").then((m) => m.DashboardModule),
+               },
+               {
+                    path: "transactions",
+                    loadChildren: () =>
+                         import("@ralbx/pages/transactions").then((m) => m.TransactionsModule),
+               },
+               {
+                    path: "templates",
+                    loadChildren: () =>
+                         import("@ralbx/pages/templates").then((m) => m.TemplatesModule),
+               },
+          ]
+  }
 ];
 
 @NgModule({
