@@ -1,4 +1,3 @@
-# core-src-lib-guards
+# dashboard
 
 This library was generated with [Nx](https://nx.dev).
-

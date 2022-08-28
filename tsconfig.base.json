@@ -10,26 +10,39 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngrx-transactions-app/auth": ["libs/auth/src/index.ts"],
-      "@ngrx-transactions-app/core": ["libs/core/src/index.ts"],
+      "@ngrx-transactions-app/auth": [
+        "libs/auth/src/index.ts"
+      ],
+      "@ngrx-transactions-app/core": [
+        "libs/core/src/index.ts"
+      ],
       "@ngrx-transactions-app/core/components": [
         "libs/core/src/lib/components/src/index.ts"
       ],
-      "@ngrx-transactions-app/core/form": [
-        "libs/core/src/lib/components/src/lib/form/src/index.ts"
+      "@ngrx-transactions-app/core-forms": [
+        "libs/core/src/lib/components/src/lib/forms/src/index.ts"
       ],
-      "@ngrx-transactions-app/models": [
+      "@ngrx-transactions-app/dashboard": [
+        "libs/dashboard/src/index.ts"
+      ],
+      "@ngrx-transactions-app/core-guards": [
+        "libs/core/src/lib/guards/src/index.ts"
+      ],
+      "@ngrx-transactions-app/core-models": [
         "libs/core/src/lib/models/src/index.ts"
-      ],
-      "@ngrx-transactions-app/core/src/libs/models": [
-        "libs/core/src/libs/models/src/index.ts"
       ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

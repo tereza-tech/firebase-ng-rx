@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,5 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    null;
+  }
 }

@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
@@ -8,7 +12,9 @@ import { RouterModule } from '@angular/router';
   declarations: [AppComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'accessorApp' }),
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' /* 'enabled' */ }),
     RouterModule,
   ],
   providers: [],
