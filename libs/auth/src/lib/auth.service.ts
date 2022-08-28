@@ -2,8 +2,7 @@
 import { Injectable, Inject } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { tap, map, catchError } from "rxjs/operators";
-import { Role, User, Token } from "@ngrx-transactions-app/core-models";
-
+import { User} from '@ngrx-transactions-app/core-models'
 
 @Injectable({
     providedIn: "root",

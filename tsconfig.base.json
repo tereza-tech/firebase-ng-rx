@@ -30,14 +30,14 @@
       "@ngrx-transactions-app/core-forms": [
         "libs/core/src/lib/components/src/lib/forms/src/index.ts"
       ],
-      "@ngrx-transactions-app/core-models": [
-        "libs/core/src/libs/models/src/index.ts"
-      ],
       "@ngrx-transactions-app/dashboard": [
         "libs/dashboard/src/index.ts"
       ],
       "@ngrx-transactions-app/core-guards": [
         "libs/core/src/lib/guards/src/index.ts"
+      ],
+      "@ngrx-transactions-app/core-models": [
+        "libs/core/src/lib/models/src/index.ts"
       ]
     }
   },

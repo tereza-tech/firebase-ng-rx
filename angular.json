@@ -109,6 +109,24 @@
       },
       "tags": []
     },
+    "core-models": {
+      "projectType": "library",
+      "root": "libs/core/src/lib/models",
+      "sourceRoot": "libs/core/src/lib/models/src",
+      "prefix": "ngrx-transactions-app",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core/src/lib/models/**/*.ts",
+              "libs/core/src/lib/models/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "dashboard": {
       "projectType": "library",
       "root": "libs/dashboard",
@@ -156,42 +174,6 @@
             "lintFilePatterns": [
               "libs/core/src/lib/components/src/lib/form/**/*.ts",
               "libs/core/src/lib/components/src/lib/form/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
-    "core-models": {
-      "projectType": "library",
-      "root": "libs/core/src/lib/models",
-      "sourceRoot": "libs/core/src/lib/models/src",
-      "prefix": "ngrx-transactions-app",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/core/src/lib/models"
-          ],
-          "options": {
-            "project": "libs/core/src/lib/models/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/core/src/lib/models/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/core/src/lib/models/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/core/src/lib/models/**/*.ts",
-              "libs/core/src/lib/models/**/*.html"
             ]
           }
         }

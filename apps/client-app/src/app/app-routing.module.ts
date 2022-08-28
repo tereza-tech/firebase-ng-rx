@@ -18,7 +18,7 @@ const routes: Routes = [
                {
                     path: "dashboard",
                     loadChildren: () =>
-                         import("@ralbx/pages/dashboard").then((m) => m.DashboardModule),
+                         import("@ngrx-transactions-app/dashboard").then((m) => m.DashboardModule),
                },
                {
                     path: "transactions",

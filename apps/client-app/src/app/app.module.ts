@@ -8,19 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule, InitialNavigation } from '@angular/router';
-import { authRoutes, AuthModule } from '@demo-app/auth';
 import { LayoutComponent } from './layout/layout.component';
+import { AuthModule } from '@ngrx-transactions-app/auth';
 
 @NgModule({
   declarations: [AppComponent, LayoutComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'shellApp' }),
+    BrowserAnimationsModule,
     NxModule.forRoot(),
-    RouterModule.forRoot([{ path: 'auth', children: authRoutes }], {
-      initialNavigation: 'enabled',
-    }),
-    AuthModule,
-    RouterModule, // added
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent],
