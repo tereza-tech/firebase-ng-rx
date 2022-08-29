@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/firestore/src",
+  "prefix": "ng-test",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/firestore/**/*.ts",
+          "libs/firestore/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

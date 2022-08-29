@@ -1,1 +1,2 @@
-export * from './lib/users'
+export * from './lib/models.module';
+export * from './lib/users';

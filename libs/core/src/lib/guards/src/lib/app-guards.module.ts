@@ -7,9 +7,8 @@ import * as UserPermitGuard from './userPermitted.guard'
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    AuthGuard
+    CommonModule
   ],
-  exports: [ AuthGuard, UserPermitGuard]
+  exports: [ ]
 })
 export class AppGuardsModule { }

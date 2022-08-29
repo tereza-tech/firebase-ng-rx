@@ -1,0 +1,63 @@
+[debug] [2022-08-28T16:01:06.935Z] ----------------------------------------------------------------------
+[debug] [2022-08-28T16:01:06.937Z] Command:       /home/gitpod/.nvm/versions/node/v16.17.0/bin/node /home/gitpod/.nvm/versions/node/v16.17.0/bin/firebase login:ci
+[debug] [2022-08-28T16:01:06.938Z] CLI Version:   11.8.0
+[debug] [2022-08-28T16:01:06.938Z] Platform:      linux
+[debug] [2022-08-28T16:01:06.938Z] Node Version:  v16.17.0
+[debug] [2022-08-28T16:01:06.938Z] Time:          Sun Aug 28 2022 16:01:06 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-08-28T16:01:06.938Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-28T16:01:06.941Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[warn] ⚠  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=640326586&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-08-28T16:01:07.255Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-08-28T16:01:07.255Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-08-28T16:03:20.961Z] ----------------------------------------------------------------------
+[debug] [2022-08-28T16:03:20.964Z] Command:       /home/gitpod/.nvm/versions/node/v16.17.0/bin/node /home/gitpod/.nvm/versions/node/v16.17.0/bin/firebase login:ci
+[debug] [2022-08-28T16:03:20.964Z] CLI Version:   11.8.0
+[debug] [2022-08-28T16:03:20.965Z] Platform:      linux
+[debug] [2022-08-28T16:03:20.965Z] Node Version:  v16.17.0
+[debug] [2022-08-28T16:03:20.965Z] Time:          Sun Aug 28 2022 16:03:20 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-08-28T16:03:20.966Z] ----------------------------------------------------------------------
+[debug] 
+[warn] ⚠  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=113300152&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-08-28T16:03:47.413Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2022-08-28T16:03:47.414Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"15966b2b-a6e9-4da7-b71a-3c02478d0d48"}
+[debug] [2022-08-28T16:03:47.810Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2022-08-28T16:03:47.810Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"dl-70lyfU8QzkKKgHBlHdMgtC-UYpaqx4XhnPTvzqJY"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    15966
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=FCri-xndH2VQOFgVoW30aRyP0D_IbzWXh4k0lYivYdM&session=15966b2b-a6e9-4da7-b71a-3c02478d0d48&attest=dl-70lyfU8QzkKKgHBlHdMgtC-UYpaqx4XhnPTvzqJY
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 
+[debug] [2022-08-28T16:17:00.346Z] ----------------------------------------------------------------------
+[debug] [2022-08-28T16:17:00.348Z] Command:       /home/gitpod/.nvm/versions/node/v16.17.0/bin/node /home/gitpod/.nvm/versions/node/v16.17.0/bin/firebase login
+[debug] [2022-08-28T16:17:00.349Z] CLI Version:   11.8.0
+[debug] [2022-08-28T16:17:00.349Z] Platform:      linux
+[debug] [2022-08-28T16:17:00.349Z] Node Version:  v16.17.0
+[debug] [2022-08-28T16:17:00.349Z] Time:          Sun Aug 28 2022 16:17:00 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-08-28T16:17:00.349Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=162417770&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
