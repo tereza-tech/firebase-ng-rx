@@ -18,7 +18,8 @@
       "@ng-test/firebase": ["libs/firebase/src/index.ts"],
       "@ng-test/firestore": ["libs/firestore/src/index.ts"],
       "@ng-test/shared/data/user": ["libs/shared/data/user/src/index.ts"],
-      "@ng-test/shared/models": ["libs/shared/models/src/index.ts"]
+      "@ng-test/shared/models": ["libs/shared/models/src/index.ts"],
+      "@ng-test/ui/components": ["libs/ui/components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

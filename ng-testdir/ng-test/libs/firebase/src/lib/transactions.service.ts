@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ITransaction } from '@ng-test/shared/models';
+import { ITransaction } from '../../../shared/models/src';
 import {
   Firestore, addDoc, collection, collectionData,
   doc, docData, deleteDoc, updateDoc, DocumentReference, setDoc
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class TransactionsService {
 
   constructor(private firestore: Firestore) { }
 
@@ -23,7 +23,7 @@ export class UserService {
     return collectionData(colRef, { idField: 'id' }) as Observable<ITransaction[]>;
   }
 
-  delbook(transaction: ITransaction) {
+  delTransaction(transaction: ITransaction) {
     const colDocRef = doc(this.firestore, `transactions/${transaction.id}`);
     return deleteDoc(colDocRef);
   }

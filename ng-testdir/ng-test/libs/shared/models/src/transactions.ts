@@ -4,5 +4,5 @@ export interface ITransaction {
     fromUser: string
     toUser: string; 
     description: string;
-    price: number;
+    spending: number;
 }

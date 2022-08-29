@@ -1,0 +1,90 @@
+
+<table class="table table-striped">
+  <thead>
+   <tr>
+     <th scope="col">ID</th>
+     <th scope="col">Name</th>
+     <th scope="col">From</th>
+     <th scope="col">To</th>
+     <th scope="col">Status</th>
+     <th scope="col">Spendings</th>
+     <th scope="col">Edit</th>
+     <th scope="col">Delete</th>
+   </tr>
+  </thead>
+  <tbody *ngIf="transactions">
+    <tr *ngFor="let tra of transactions; index as i">
+      <th scope="row">{{ i+1 }}</th>
+      <td>{{ tra.name }}</td>
+      <td>{{ tra.author }}</td>
+      <td>{{ tra.genre }}</td>
+      <td>{{ tra.price }}</td>
+      <td  (click)="editModal(tra)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+            </svg>
+        </td>
+        <td (click)="deleteTransaction(tra)" style="text-align:center ;" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+              <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+            </svg>
+        </td>
+    </tr>
+   </tbody>
+</table>
+
+
+
+<div *ngIf="transaction" class="container p-4" style="width:100%">
+    <h4 mat-dialog-title style="font-weight: 500;">Edit Your Record </h4>
+    <form #transactionForm="ngForm" (ngSubmit)="onUpdate()">
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput  name="name" #nameCtrl="ngModel" 
+          [(ngModel)]="transaction.name" placeholder="Enter Name" >
+          <mat-icon matSuffix>transaction</mat-icon>
+          <mat-hint>Edit name</mat-hint>
+        </mat-form-field>        
+      </div>
+
+      <div class="form-group">
+        <mat-form-field  class="example-full-width"  appearance="outline">
+          <mat-label >Paid by</mat-label>
+          <input matInput  name="fromUser"  #authorCtrl="ngModel"
+          [(ngModel)]="transaction.fromUser" placeholder="User Name"  >
+          <mat-icon matSuffix>man</mat-icon>
+          <mat-hint>Edit Paid by</mat-hint>
+        </mat-form-field>        
+      </div>
+  
+      <div class="form-group">
+      
+          <label class="label">Select status</label>
+          <select  name="status" #genreCtrl=ngModel 
+          [(ngModel)]="transaction.status" >
+            <option value="New" >New</option>
+            <option value="Edited">Edited</option>
+            <option value="Paid">Paid</option>
+          </select>
+      
+        </div>
+      <div class="form-group mt-4">
+        <mat-form-field class="example-full-width" appearance="outline" floatLabel="always">
+          <mat-label>Spending</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0" name="spending" #priceCtrl="ngModel" 
+          [(ngModel)]="transaction.spending">
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.0</span>
+        </mat-form-field>
+        </div>
+
+  
+      <div class="form-group float-right">
+       <button mat-raised-button  color="accent" type="submit"  [disabled]="!transactionForm.valid">
+          <i class="bi bi-plus"></i>Update Transaction</button>
+       </div>
+    </form>
+  </div>

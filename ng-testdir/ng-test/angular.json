@@ -355,6 +355,24 @@
       },
       "tags": []
     },
-    "test": "apps/test"
+    "test": "apps/test",
+    "ui-components": {
+      "projectType": "library",
+      "root": "libs/ui/components",
+      "sourceRoot": "libs/ui/components/src",
+      "prefix": "ng-test",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui/components/**/*.ts",
+              "libs/ui/components/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    }
   }
 }

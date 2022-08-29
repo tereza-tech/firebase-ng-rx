@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { RemoteEntryComponent } from './entry.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { } from '@ng-test/ui/components'
 
 @NgModule({
   declarations: [RemoteEntryComponent, NxWelcomeComponent],
@@ -16,13 +17,13 @@ import { NxWelcomeComponent } from './nx-welcome.component';
       {
         path: '',
         component: RemoteEntryComponent,
-      },
-      {
-        path: 'firedb',
-        loadChildren: () => import('@ng-test/firebase').then((m) => m.FirebaseModule)
+        children: [{
+          path: '',
+          loadChildren: () => import('@ng-test/ui/components').then((m) => m.TransactionComponent)
+        }]
       }
     ]),
   ],
   providers: [],
 })
-export class RemoteEntryModule {}
+export class RemoteEntryModule { }
