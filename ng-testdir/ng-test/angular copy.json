@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "firebase": {
+      "projectType": "library",
+      "root": "libs/firebase",
+      "sourceRoot": "libs/firebase/src",
+      "prefix": "ng-test",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/firebase"],
+          "options": {
+            "project": "libs/firebase/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/firebase/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/firebase/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/firebase/**/*.ts",
+              "libs/firebase/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "firestore": "libs/firestore",
+    "test": "apps/test"
+  }
+}

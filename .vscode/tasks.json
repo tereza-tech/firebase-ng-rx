@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "nx",
+			"project": "",
+			"command": "run-many",
+			"flags": [
+				"--target=serve",
+				"--all=true"
+			],
+			"problemMatcher": [],
+			"label": "nx: nx run-many --target=serve --all=true"
+		}
+	]
+}

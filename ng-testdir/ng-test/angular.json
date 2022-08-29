@@ -1,0 +1,342 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "app-shell": {
+      "projectType": "application",
+      "root": "apps/app-shell",
+      "sourceRoot": "apps/app-shell/src",
+      "prefix": "ng-test",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:webpack-browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/app-shell",
+            "index": "apps/app-shell/src/index.html",
+            "main": "apps/app-shell/src/main.ts",
+            "polyfills": "apps/app-shell/src/polyfills.ts",
+            "tsConfig": "apps/app-shell/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/app-shell/src/favicon.ico",
+              "apps/app-shell/src/assets"
+            ],
+            "styles": ["apps/app-shell/src/styles.scss"],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "apps/app-shell/webpack.config.js"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/app-shell/src/environments/environment.ts",
+                  "with": "apps/app-shell/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "customWebpackConfig": {
+                "path": "apps/app-shell/webpack.prod.config.js"
+              }
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "executor": "@nrwl/angular:module-federation-dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "app-shell:build:production"
+            },
+            "development": {
+              "browserTarget": "app-shell:build:development"
+            }
+          },
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 4200,
+            "publicHost": "http://localhost:4200"
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "app-shell:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/app-shell/**/*.ts",
+              "apps/app-shell/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/app-shell"],
+          "options": {
+            "jestConfig": "apps/app-shell/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "app-shell-e2e": {
+      "root": "apps/app-shell-e2e",
+      "sourceRoot": "apps/app-shell-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/app-shell-e2e/cypress.config.ts",
+            "devServerTarget": "app-shell:serve:development",
+            "testingType": "e2e"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "app-shell:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/app-shell-e2e/**/*.{js,ts}"]
+          }
+        }
+      },
+      "tags": [],
+      "implicitDependencies": ["app-shell"]
+    },
+    "client-app": {
+      "projectType": "application",
+      "root": "apps/client-app",
+      "sourceRoot": "apps/client-app/src",
+      "prefix": "ng-test",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:webpack-browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/client-app",
+            "index": "apps/client-app/src/index.html",
+            "main": "apps/client-app/src/main.ts",
+            "polyfills": "apps/client-app/src/polyfills.ts",
+            "tsConfig": "apps/client-app/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/client-app/src/favicon.ico",
+              "apps/client-app/src/assets"
+            ],
+            "styles": ["apps/client-app/src/styles.scss"],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "apps/client-app/webpack.config.js"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/client-app/src/environments/environment.ts",
+                  "with": "apps/client-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "customWebpackConfig": {
+                "path": "apps/client-app/webpack.prod.config.js"
+              }
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "executor": "@nrwl/angular:webpack-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "client-app:build:production"
+            },
+            "development": {
+              "browserTarget": "client-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 4201,
+            "publicHost": "http://localhost:4201"
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "client-app:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/client-app/**/*.ts",
+              "apps/client-app/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/client-app"],
+          "options": {
+            "jestConfig": "apps/client-app/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "serve-static": {
+          "executor": "@nrwl/angular:file-server",
+          "defaultConfiguration": "development",
+          "options": {
+            "buildTarget": "client-app:build",
+            "port": 4201
+          },
+          "configurations": {
+            "development": {
+              "buildTarget": "client-app:build:development"
+            },
+            "production": {
+              "buildTarget": "client-app:build:production"
+            }
+          }
+        }
+      },
+      "tags": []
+    },
+    "client-app-e2e": {
+      "root": "apps/client-app-e2e",
+      "sourceRoot": "apps/client-app-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/client-app-e2e/cypress.config.ts",
+            "devServerTarget": "client-app:serve:development",
+            "testingType": "e2e"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "client-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/client-app-e2e/**/*.{js,ts}"]
+          }
+        }
+      },
+      "tags": [],
+      "implicitDependencies": ["client-app"]
+    },
+    "firebase": {
+      "projectType": "library",
+      "root": "libs/firebase",
+      "sourceRoot": "libs/firebase/src",
+      "prefix": "ng-test",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/firebase"],
+          "options": {
+            "project": "libs/firebase/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/firebase/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/firebase/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/firebase/**/*.ts",
+              "libs/firebase/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "firestore": "libs/firestore",
+    "shared-data-user": {
+      "projectType": "library",
+      "root": "libs/shared/data/user",
+      "sourceRoot": "libs/shared/data/user/src",
+      "prefix": "ng-test",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data/user/**/*.ts",
+              "libs/shared/data/user/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "test": "apps/test"
+  }
+}

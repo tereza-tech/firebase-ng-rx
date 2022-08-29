@@ -1,0 +1,89 @@
+[debug] [2022-08-28T16:18:32.899Z] ----------------------------------------------------------------------
+[debug] [2022-08-28T16:18:32.901Z] Command:       /home/gitpod/.nvm/versions/node/v16.17.0/bin/node /home/gitpod/.nvm/versions/node/v16.17.0/bin/firebase login
+[debug] [2022-08-28T16:18:32.901Z] CLI Version:   11.8.0
+[debug] [2022-08-28T16:18:32.902Z] Platform:      linux
+[debug] [2022-08-28T16:18:32.902Z] Node Version:  v16.17.0
+[debug] [2022-08-28T16:18:32.902Z] Time:          Sun Aug 28 2022 16:18:32 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-08-28T16:18:32.902Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=85032839&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-08-28T16:19:28.460Z] ----------------------------------------------------------------------
+[debug] [2022-08-28T16:19:28.462Z] Command:       /home/gitpod/.nvm/versions/node/v16.17.0/bin/node /home/gitpod/.nvm/versions/node/v16.17.0/bin/firebase login
+[debug] [2022-08-28T16:19:28.463Z] CLI Version:   11.8.0
+[debug] [2022-08-28T16:19:28.463Z] Platform:      linux
+[debug] [2022-08-28T16:19:28.463Z] Node Version:  v16.17.0
+[debug] [2022-08-28T16:19:28.463Z] Time:          Sun Aug 28 2022 16:19:28 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-08-28T16:19:28.464Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=585259344&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-08-28T16:20:18.188Z] ----------------------------------------------------------------------
+[debug] [2022-08-28T16:20:18.190Z] Command:       /home/gitpod/.nvm/versions/node/v16.17.0/bin/node /home/gitpod/.nvm/versions/node/v16.17.0/bin/firebase login:ci
+[debug] [2022-08-28T16:20:18.191Z] CLI Version:   11.8.0
+[debug] [2022-08-28T16:20:18.191Z] Platform:      linux
+[debug] [2022-08-28T16:20:18.191Z] Node Version:  v16.17.0
+[debug] [2022-08-28T16:20:18.191Z] Time:          Sun Aug 28 2022 16:20:18 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-08-28T16:20:18.192Z] ----------------------------------------------------------------------
+[debug] 
+[warn] ⚠  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=707211886&redirect_uri=http%3A%2F%2Flocalhost%3A9006
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-08-28T16:21:04.740Z] ----------------------------------------------------------------------
+[debug] [2022-08-28T16:21:04.742Z] Command:       /home/gitpod/.nvm/versions/node/v16.17.0/bin/node /home/gitpod/.nvm/versions/node/v16.17.0/bin/firebase login:ci
+[debug] [2022-08-28T16:21:04.743Z] CLI Version:   11.8.0
+[debug] [2022-08-28T16:21:04.743Z] Platform:      linux
+[debug] [2022-08-28T16:21:04.743Z] Node Version:  v16.17.0
+[debug] [2022-08-28T16:21:04.743Z] Time:          Sun Aug 28 2022 16:21:04 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-08-28T16:21:04.744Z] ----------------------------------------------------------------------
+[debug] 
+[warn] ⚠  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=725008148&redirect_uri=http%3A%2F%2Flocalhost%3A9006
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-08-28T16:21:28.570Z] ----------------------------------------------------------------------
+[debug] [2022-08-28T16:21:28.572Z] Command:       /home/gitpod/.nvm/versions/node/v16.17.0/bin/node /home/gitpod/.nvm/versions/node/v16.17.0/bin/firebase login:ci
+[debug] [2022-08-28T16:21:28.572Z] CLI Version:   11.8.0
+[debug] [2022-08-28T16:21:28.572Z] Platform:      linux
+[debug] [2022-08-28T16:21:28.572Z] Node Version:  v16.17.0
+[debug] [2022-08-28T16:21:28.573Z] Time:          Sun Aug 28 2022 16:21:28 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-08-28T16:21:28.573Z] ----------------------------------------------------------------------
+[debug] 
+[warn] ⚠  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=411393013&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-08-28T16:22:11.209Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2022-08-28T16:22:11.210Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"dc263636-8c3e-4de8-bd11-aab689eae970"}
+[debug] [2022-08-28T16:22:11.595Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2022-08-28T16:22:11.595Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"n1VglykwIYtfqq0n0bg_2YbgfotTUYAXkWtjLDMaS_8"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    DC263
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=I0YZILSA05U0zKRIDB6E4dE6sfWfdLxTRhGhmGAh1Ls&session=dc263636-8c3e-4de8-bd11-aab689eae970&attest=n1VglykwIYtfqq0n0bg_2YbgfotTUYAXkWtjLDMaS_8
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 
